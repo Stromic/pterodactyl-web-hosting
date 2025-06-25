@@ -30,4 +30,4 @@ echo "Starting PHP-FPM..."
 /usr/sbin/php-fpm83 --fpm-config /home/container/php-fpm/php-fpm.conf --daemonize
 
 echo "Starting Apache..."
-httpd -f /home/container/apache2/httpd.conf -DFOREGROUND
+exec httpd -f /home/container/apache2/httpd.conf -DFOREGROUND
