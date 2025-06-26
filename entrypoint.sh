@@ -26,6 +26,9 @@ echo ":/home/container$ ${MODIFIED_STARTUP}"
 # Run the Server
 ${MODIFIED_STARTUP}
 
+echo "Starting Redis..."
+redis-server --daemonize yes
+
 echo "Starting PHP-FPM..."
 /usr/sbin/php-fpm83 --fpm-config /home/container/php-fpm/php-fpm.conf --daemonize
 
